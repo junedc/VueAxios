@@ -1,4 +1,5 @@
 <template>
+
     <div class="header">
         <ul class="nav nav-pills pull-right">
             <li class="active"><a href="#">Home</a></li>
@@ -7,7 +8,6 @@
         </ul>
         <h3 class="text-muted">Project name</h3>
     </div>
-
 
 </template>
 
