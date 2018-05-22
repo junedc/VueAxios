@@ -23,8 +23,9 @@
 <script>
 
     import axios from 'axios';
+    import auth from '@/packages/auth/Auth.js'
 
-
+    
     export default {
         data() {
             return {
@@ -48,7 +49,7 @@
                 axios.post('http://localhost:8000/oauth/token',data)
                   .then(function (response) {
                     console.log(response);
-                      //this.$auth.setToken(response.data.access_token,response.data.expires_in + Date.now);
+                      this.$auth.setToken(response.data.access_token,response.data.expires_in + Date.now);
 
 
                   })
