@@ -3,8 +3,11 @@ import App from './App'
 import router from './router/'
 
 
+import Auth from './packages/auth/Auth.js'
 
 Vue.config.productionTip = false
+
+Vue.use(Auth)
  
 
 

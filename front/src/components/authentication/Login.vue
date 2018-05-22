@@ -48,6 +48,9 @@
                 axios.post('http://localhost:8000/oauth/token',data)
                   .then(function (response) {
                     console.log(response);
+                      //this.$auth.setToken(response.data.access_token,response.data.expires_in + Date.now);
+
+
                   })
                   .catch(function (error) {
                     console.log(error);
