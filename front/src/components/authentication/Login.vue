@@ -9,7 +9,7 @@
         <label class="checkbox">
             <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
         </label>
-        <button class="btn btn-lg btn-primary btn-block">Login</button>
+        <button class="btn btn-lg btn-primary btn-block" @click="test">Login</button>
 
 
         <pre>
@@ -21,12 +21,29 @@
 </template>
 
 <script>
+
+    import axios from 'axios';
+
+
     export default {
         data() {
             return {
                 username: '',
                 password: ''
             }
+        },
+
+        methods: {
+            test() {
+                axios.get('http://localhost:8000/test')
+                  .then(function (response) {
+                    console.log(response);
+                  })
+                  .catch(function (error) {
+                    console.log(error);
+                  });
+            }
+
         }
 
     }
