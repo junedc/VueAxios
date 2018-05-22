@@ -24,7 +24,7 @@ const router = new VueRouter({
             meta: {
                 forVisitors:true
             }
-        },
+        }
 
 
 
