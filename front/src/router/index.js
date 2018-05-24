@@ -8,13 +8,13 @@ import Register from '@/components/authentication/Register.vue'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
-    routes:[
+    routes: [
 
         {
             path: "/login",
             component: Login,
             meta: {
-                forVisitors:true
+                forVisitors: true
             }
         },
 
@@ -22,16 +22,13 @@ const router = new VueRouter({
             path: "/register",
             component: Register,
             meta: {
-                forVisitors:true
+                forVisitors: true
             }
         }
 
 
-
-
     ]
 })
-
 
 
 export default router

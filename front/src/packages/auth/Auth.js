@@ -13,7 +13,9 @@ export default function (Vue) {
 
             if (Date.now() > parseInt(expiration)) {
                 this.destroyToken();
+                return null;
             }
+            return token;
         },
         destroyToken() {
             localStorage.removeItem('token')
@@ -28,10 +30,13 @@ export default function (Vue) {
     }
 
     Object.defineProperties(Vue.prototype, {
-        $auth: {
-            get() {
-                return Vue.auth;
-            }
+        $auth() {
+
+                return Vue.auth
+
         }
     })
+
+
+    // Vue.prototype.$auth  = Vue.auth;
 }
